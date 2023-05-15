@@ -45,6 +45,11 @@ void GetRoot(<Model> Model | Player) >> Instance
 Gets a root part of a player (If PrimaryPart is nil will go through every possible GOOD root part required)
 
 ```cpp
+void SendChat(<Message> string, <To> string) >> nil
+```
+Forces you to send a chat in Default Roblox Chat
+
+```cpp
 :void FireTouch(<Part> Instance, <Reverse> boolean) >> nil
 ```
 Fires a touch transmitter / interest.
@@ -172,4 +177,8 @@ Changes the players jump power
 
 ```cpp
 void Player.Kill(<BreakJoints> boolean) >> nil
+
+/*
+END OF CLASS
+*/
 ```
