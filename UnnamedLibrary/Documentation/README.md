@@ -95,10 +95,6 @@ void Create:SetColor(<Color> Color3 | BrickColor) >> nil
 void Create:SetPropertyData(<Data> table, <Lerp> float, <TweenData> table) >> nil
                                           Optional      Optional
 void Create:SetPosition(<Position> Vector3 | UDim2) >> nil
-
-/*
-End of Class
-*/
 ```
 
 ```cpp
@@ -177,8 +173,34 @@ Changes the players jump power
 
 ```cpp
 void Player.Kill(<BreakJoints> boolean) >> nil
-
-/*
-END OF CLASS
-*/
 ```
+
+### Conversions SubLibrary
+```cpp
+void COnversions.CustomEncodingAlgorithm(<AlgorithmName> string, <Table> table) >> { function, function, table }
+```
+Custom string encode/decode algorithm like Base64, Base32, Cypher, etc.
+
+### Math SubLibrary
+```cpp
+void Math.rval(<Number> number, <ReturnValue> any) >> number | boolean
+```
+If number argument is less-than or equal to 0 than it'll return 0/false, if its greater than 0 then it'll return the ReturnValue argument
+
+### Random SubLibrary
+```cpp
+void Random.String(<Amount> number, <IncluddeCaps> boolean) >> string
+```
+Makes a random string with the length of the Amount argument and has caps if IncludeCaps argument is true.
+E.X: #rFSi(*
+
+```cpp
+void Random.Int(<Min> number, <max> number) >> number
+```
+Returns a random int. (No decimals)
+
+
+```cpp
+void Random.Float(<Min> number, <max> number) >> number
+```
+Returns a random float. (Decimals)
