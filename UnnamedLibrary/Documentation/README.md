@@ -136,6 +136,40 @@ UnnamedLibrary.Notify("Hello", "From me", 2)
 /* Custom Notification */
 UnnamedLibrary.CustomNotification = Parent.NotificationFrame -- NAME MUST BE "NotificationFrame" AND MUST BE A "Frame"
 UnnamedLibrary.Notify("Hello", "From me", 2)
--- TITLE WILL CENTER TO TOP
--- DESCRIPTION WILL CENTER TO MIDDLE
+-- TITLE WILL CENTER TO TOP; Title ZIndex is 99
+-- DESCRIPTION WILL CENTER TO MIDDLE; Description ZIndex is 99
+```
+```cpp
+void ScaleToOffset(<ScaledUdim> UDim2) >> UDim2
+```
+Converts **UDim2.fromScale** to **UDim2.fromOffset**
+
+```cpp
+void OffsetToScale(<OffsetUdim> UDim2) >> UDim2
+```
+Converts **UDim2.fromOffset** to **UDim2.fromScale**
+
+```cpp
+void GetIndexValue(<Table> table, <Value> string) >> number
+```
+Returns the index of a value in a table,
+
+```cpp
+void SetCursor(<Cursor> string, <Size> UDim2) >> nil
+```
+Changes the cursor type (Disable it by setting no arguments to SetCursor)
+
+### Player SubLibrary
+```cpp
+void Player.SetSpeed(<Speed> number) >> nil
+```
+Changes the players walk speed
+
+```cpp
+void Player.SetJump(<Power> number) >> nil
+```
+Changes the players jump power
+
+```cpp
+void Player.Kill(<BreakJoints> boolean) >> nil
 ```
