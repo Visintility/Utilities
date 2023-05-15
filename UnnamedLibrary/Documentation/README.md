@@ -177,9 +177,21 @@ void Player.Kill(<BreakJoints> boolean) >> nil
 
 ### Conversions SubLibrary
 ```cpp
-void COnversions.CustomEncodingAlgorithm(<AlgorithmName> string, <Table> table) >> { function, function, table }
+void COnversions.CustomEncodingAlgorithm(<AlgorithmName> string, <Table> table) >> function, function
 ```
 Custom string encode/decode algorithm like Base64, Base32, Cypher, etc.
+```lua
+local Encode, Decode = UnnamedLibrary.Conversions.CustomEncodingAlgorithm("MyEncodedecode', {
+  ['A'] = "G",
+  ['N'] = "8"
+})
+
+print(Encode("Hallo")) -- prints "HGllo"
+print(Decode("HGHG YOUR A BERD")) -- prints "HAHA YOUR A NERD"
+--SAME WITH--
+print(UnnamedLibrary.Conversions.Algorithms['MyEncodedecode'].EncodeFunction("Hallo")) -- prints "HGllo"
+print(UnnamedLibrary.Conversions.Algorithms['MyEncodedecode'].DecodeFunction("HGHG YOUR A BERD")) -- prints "HAHA YOUR A NERD"
+```
 
 ### Math SubLibrary
 ```cpp
