@@ -2,6 +2,10 @@
 
 - Any function starting with ":void" is a Library:Function operator
 - Any function that has **AUTORAN** above it, no need to use it because it's ran automatically to make library run.
+
+```lua
+local UnnamedLibrary, SubLibraries = loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Visintility/Utilities/main/UnnamedLibrary/Source.lua"), true)()
+```
 ### UnnamedLibrary
 ```cpp
 void GetPlayersByToken(<Token> string) >> { Instance }
